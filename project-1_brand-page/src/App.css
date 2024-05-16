@@ -1,0 +1,286 @@
+/* import google fonts poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --red: #d01c28;
+    --gray: #2e2e2e;
+    --white: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    height: 72px;
+    padding: 5px 0;
+    background: crimson;
+}
+
+header .logo {
+    line-height: 72px;
+    display: flex;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    align-items: center;
+    position: relative;
+}
+
+header nav .menu__nav {
+    content: '';
+    position: absolute;
+    top: 67px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: none;
+    padding-bottom: 5px;
+    z-index: -1;
+    background: crimson;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0 10px;
+
+}
+
+header nav ul li {
+    color: var(--gray);
+    font-size: 22px;
+    transition: 0.3s ease-in;
+}
+
+header nav ul li:hover {
+    color: var(--red);
+}
+
+header nav button {
+    all: unset;
+    text-align: center;
+    width: calc(100% - 10px);
+    border-radius: 8px;
+    margin: auto;
+    height: 32px;
+    display: block;
+    cursor: pointer;
+    background: var(--red);
+    font-weight: 500;
+}
+
+/* hide menu icon */
+header nav .menu_btn {
+    position: relative;
+    display: block;
+    line-height: 72px;
+    font-size: 32px;
+    color: var(--gray);
+    transition: 0.3s ease-in-out;
+}
+
+header nav .menu_btn:hover {
+    color: var(--white);
+}
+
+/* header apply css end */
+
+/* hero section start */
+.hero {
+    display: flex;
+    padding: 0 10px;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.hero .hero__image img {
+    width: 100%;
+    height: auto;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.hero__content h1 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.hero__content p {
+    font-weight: 500;
+    max-width: 400px;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--gray);
+}
+
+.hero__content .hero_btn {
+    display: flex;
+    color: var(--white);
+    gap: 15px;
+
+}
+
+.hero__content .hero_btn button {
+    all: unset;
+    font-size: 14px;
+    padding: 2px 16px;
+    border-radius: 8px;
+    height: 28px;
+    cursor: pointer;
+    background: var(--red);
+    font-weight: 500;
+}
+
+/* hero content btn */
+.hero_btn .secondary_btn {
+    background: transparent !important;
+    color: var(--gray) !important;
+    border: 1px solid var(--gray) !important;
+}
+
+/* hero icon */
+.hero__Shopping_icon p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19.36px;
+    margin-bottom: 10px;
+    color: var(--gray);
+}
+
+.hero__Shopping_icon .hero__icon {
+    display: flex;
+    gap: 16px;
+}
+.hero__Shopping_icon .hero__icon img{
+    width: 25px;
+    height: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .container {
+        max-width: 1280px !important;
+        margin: 0 auto;
+    }
+
+    /* header apply css */
+    header {
+        background: none;
+    }
+
+    /* menu section */
+    header nav ul {
+        display: flex;
+        list-style: none;
+        gap: 24px;
+    }
+
+    /* button section */
+    button {
+        padding: 6px 16px;
+    }
+
+    /* hide menu icon */
+    header nav .menu_btn {
+        display: none;
+    }
+
+    header nav .menu_btn:hover {
+        color: var(--red);
+    }
+
+    header nav .menu__nav {
+        /* content: ''; */
+        /* position: absolute; */
+        top: 0;
+        right: 0;
+        width: 0%;
+        margin: 0 auto;
+        height: auto;
+        display: flex;
+        padding-bottom: 5px;
+        background: transparent;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header nav button {
+        width: initial;
+        padding: 5px 20px;
+    }
+    /* header apply css end */
+
+    /* hero__section css apply */
+    .hero {
+        display: flex;
+        align-items: center;
+        height: calc(100vh - 72px);
+        flex-direction: row;
+
+    }
+    .hero .hero__image img {
+        width: initial;
+        height: auto;
+    }
+    /* hero content */
+    .hero__content {
+        gap: 36px;
+    }
+
+    .hero__content h1 {
+        font-weight: 800;
+        font-size: 108px;
+        line-height: 102px;
+    }
+
+    .hero__content p {
+        font-weight: 600;
+        max-width: 400px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .hero__content .hero_btn {
+        gap: 40px;
+        /* align-items: center; */
+        line-height: 26px;
+    }
+
+    .hero__content .hero_btn button {
+        font-size: 24px;
+        padding: 10px 24px;
+    }
+
+    /* hero content btn */
+    .hero__Shopping_icon .hero__icon img {
+        width: initial;
+        height: initial;
+    }
+
+    /* hero icon */
+    .hero__Shopping_icon p {
+        font-size: 16px;
+    }
+
+}
